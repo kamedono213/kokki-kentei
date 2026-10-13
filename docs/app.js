@@ -49,6 +49,45 @@ const store = {
   get(k) { try { return JSON.parse(localStorage.getItem('kokki:' + k)); } catch (e) { return null; } },
   set(k, v) { try { localStorage.setItem('kokki:' + k, JSON.stringify(v)); } catch (e) { /* 保存できなくても遊べる */ } },
 };
+// ---------- 効果音(Web Audio で合成。音声ファイルは使わない)
+const SE = {
+  ctx: null,
+  muted: (() => { try { return localStorage.getItem('kokki:muted') === '1'; } catch (e) { return false; } })(),
+  ac() {
+    if (!this.ctx) { const C = window.AudioContext || window.webkitAudioContext; if (!C) return null; this.ctx = new C(); }
+    if (this.ctx.state === 'suspended') this.ctx.resume();
+    return this.ctx;
+  },
+  // 1音: 周波数・開始(秒)・長さ・波形・音量
+  tone(freq, at, dur, type = 'sine', vol = 0.18, slideTo = null) {
+    const c = this.ac(); if (!c) return;
+    const t = c.currentTime + at, o = c.createOscillator(), g = c.createGain();
+    o.type = type; o.frequency.setValueAtTime(freq, t);
+    if (slideTo) o.frequency.exponentialRampToValueAtTime(slideTo, t + dur);
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(vol, t + 0.012);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    o.connect(g).connect(c.destination); o.start(t); o.stop(t + dur + 0.02);
+  },
+  play(name) {
+    if (this.muted) return;
+    try {
+      if (name === 'start') { this.tone(523, 0, 0.09, 'triangle'); this.tone(784, 0.08, 0.14, 'triangle'); }
+      if (name === 'select') this.tone(660, 0, 0.06, 'triangle', 0.12);
+      if (name === 'ok') { this.tone(880, 0, 0.12, 'sine', 0.2); this.tone(1319, 0.1, 0.28, 'sine', 0.2); }
+      if (name === 'ng') { this.tone(220, 0, 0.32, 'square', 0.07, 150); }
+      if (name === 'result') [523, 659, 784].forEach((f, i) => this.tone(f, i * 0.11, 0.18, 'triangle'));
+      if (name === 'perfect') { [523, 659, 784, 1047].forEach((f, i) => this.tone(f, i * 0.1, 0.16, 'triangle')); [1047, 1319, 1568].forEach(f => this.tone(f, 0.42, 0.6, 'sine', 0.1)); }
+    } catch (e) { /* 音が出せない環境でも遊べる */ }
+  },
+  toggle() { this.muted = !this.muted; try { localStorage.setItem('kokki:muted', this.muted ? '1' : '0'); } catch (e) {} if (!this.muted) this.play('select'); },
+};
+const soundBtn = () => `<button class="link sound" id="sound" aria-pressed="${!SE.muted}" aria-label="効果音">${SE.muted ? '🔇 音なし' : '🔊 音あり'}</button>`;
+function bindSound() {
+  const b = app.querySelector('#sound');
+  if (b) b.onclick = () => { SE.toggle(); b.outerHTML = soundBtn(); bindSound(); };
+}
+
 const recordKey = () => [S.mode, S.mode === 'flag' ? S.level : '-', S.region, S.count].join('/');
 
 // 入力の表記ゆれ吸収: 全角半角・ひらがな/カタカナ・空白/ハイフン/コンマ/中点・ヴ表記を同一視
@@ -91,7 +130,7 @@ function renderHome() {
   const sample = shuffle(DATA).slice(0, 9).map(d => `<img src="${flagSrc(d.c)}" alt="">`).join('');
   app.innerHTML = `
     <header class="masthead">
-      <span class="eyebrow">WORLD FLAGS · 197か国</span>
+      <div class="bar"><span class="eyebrow">WORLD FLAGS · 197か国</span>${soundBtn()}</div>
       <h1>国旗検定</h1>
       <p>国旗の見た目、意味、そして場所。3つの方向から覚える。</p>
       <div class="pole" aria-hidden="true">${sample}</div>
@@ -101,6 +140,7 @@ function renderHome() {
         <button class="mode" data-mode="${id}"><span class="no">${m.no}</span><span><b>${m.name}</b><span>${m.desc}</span></span></button>`).join('')}
     </nav>
     <p class="note">収録国: 日本が承認している195か国 + 日本 + 北朝鮮 = 197か国(外務省「国・地域」の国名表記)。地域分けは中学地理の教科書に合わせ、中東・中央アジア・コーカサスはアジア、中米・カリブ海は北アメリカに入れています。由来の解説は英語版Wikipediaの各国国旗記事(2026年10月時点)をもとに要約しています。</p>`;
+  bindSound();
   app.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => {
     S = { screen: 'setup', mode: b.dataset.mode, region: S.region || 'all', level: S.level || 'easy', count: S.count || '10' };
     render();
@@ -139,6 +179,7 @@ function startQuiz(codes) {
   S.retry = !!codes;
   S.questions = list.map(d => makeQuestion(d));
   S.i = 0; S.score = 0; S.misses = []; S.answered = null;
+  SE.play('start');
   render();
 }
 
@@ -151,7 +192,7 @@ function makeQuestion(d) {
 
 function header() {
   const total = S.questions.length;
-  return `<div class="bar"><button class="link" id="quit">✕ やめる</button><span class="num small muted">正解 ${S.score}</span></div>
+  return `<div class="bar"><button class="link" id="quit">✕ やめる</button><span class="bar-right"><span class="num small muted">正解 ${S.score}</span>${soundBtn()}</span></div>
     <div class="progress"><span class="num small">${S.i + 1} / ${total}</span><div class="track"><div class="fill" style="width:${(S.i / total) * 100}%"></div></div></div>`;
 }
 
@@ -194,6 +235,7 @@ function renderQuiz() {
 }
 
 function bindQuit() {
+  bindSound();
   app.querySelector('#quit').onclick = () => { S.screen = 'setup'; render(); };
 }
 
@@ -201,6 +243,7 @@ function answer(ok, picked) {
   const q = S.questions[S.i];
   const d = BY[q.c];
   if (ok) S.score++; else S.misses.push(q.c);
+  SE.play(ok ? 'ok' : 'ng');
   app.querySelectorAll('[data-pick]').forEach(b => {
     b.disabled = true;
     if (b.dataset.pick === d.c) b.classList.add('ok');
@@ -219,6 +262,7 @@ function answerOX(saidTrue) {
   const d = BY[q.c];
   const ok = saidTrue === q.truth;
   if (ok) S.score++; else S.misses.push(q.c);
+  SE.play(ok ? 'ok' : 'ng');
   app.querySelectorAll('[data-ox]').forEach(b => {
     b.disabled = true;
     const isRight = (b.dataset.ox === 'o') === q.truth;
@@ -245,6 +289,7 @@ function showAfter(ok, detail) {
 
 function finish() {
   S.screen = 'result';
+  SE.play(S.score === S.questions.length ? 'perfect' : 'result');
   if (!S.retry) {
     const key = 'best:' + recordKey();
     const best = store.get(key);
@@ -375,7 +420,7 @@ function renderMapQuiz(q, d) {
     app.querySelector('#ok').disabled = !picked || done;
     app.querySelector('#clear').disabled = !picked || done;
   };
-  const choose = iso => { if (done || !iso) return; picked = iso; paint(); };
+  const choose = iso => { if (done || !iso) return; if (iso !== picked) SE.play('select'); picked = iso; paint(); };
   countries.on('click', (ev, f) => choose(f.iso));
   dots.on('click', (ev, p) => choose(p.iso));
   app.querySelector('#clear').onclick = () => { picked = null; paint(); };
@@ -387,6 +432,7 @@ function renderMapQuiz(q, d) {
     done = true;
     const ok = picked === d.c;
     if (ok) S.score++; else S.misses.push(d.c);
+    SE.play(ok ? 'ok' : 'ng');
     countries.classed('pick', false).classed('ok', f => f.iso === d.c).classed('ng', f => !ok && f.iso === picked);
     dots.classed('pick', false).classed('ok', p => p.iso === d.c).classed('ng', p => !ok && p.iso === picked);
     // 正解の国に寄せる(間違えた場合は選んだ国も画面に入れる)
