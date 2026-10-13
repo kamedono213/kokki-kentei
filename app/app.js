@@ -12,7 +12,7 @@ const REGIONS = [
 ];
 const MODES = {
   flag: { no: '①', name: '国旗あて', desc: '国旗を見て国名を、国名を見て国旗を答える' },
-  origin: { no: '②', name: '由来クイズ', desc: '国旗の色や模様に込められた意味を選ぶ' },
+  origin: { no: '②', name: '由来クイズ', desc: '国旗の由来の説明が正しいか、○か×で答える' },
   map: { no: '③', name: '場所あて', desc: '国旗の国を世界地図の上でタップする' },
 };
 const LEVELS = {
@@ -144,7 +144,8 @@ function startQuiz(codes) {
 
 function makeQuestion(d) {
   if (S.mode === 'flag' && S.level !== 'hard') return { c: d.c, opts: shuffle([d, ...pickDistractors(d, 3)].map(o => o.c)) };
-  if (S.mode === 'origin') return { c: d.c, opts: shuffle([d, ...pickDistractors(d, 3, { avoidLook: true, key: o => o.origin.slice(0, 12) })].map(o => o.c)) };
+  // 由来: 正しい文か、1か所だけ書き換えた間違い文を半々で出す
+  if (S.mode === 'origin') return { c: d.c, truth: !d.fake || Math.random() < 0.5 };
   return { c: d.c };
 }
 
@@ -174,14 +175,16 @@ function renderQuiz() {
       </form>`;
   } else if (S.mode === 'origin') {
     body = `<img class="flag big" src="${flagSrc(d.c)}" alt="${esc(d.ja)}の国旗">
-      <p class="prompt">${esc(d.ja)}の国旗。この旗の由来は?</p>
-      <div class="choices">${q.opts.map(c => `<button class="choice long" data-pick="${c}">${esc(BY[c].origin)}</button>`).join('')}</div>`;
+      <p class="prompt">${esc(d.ja)}の国旗。この説明は正しい?</p>
+      <blockquote class="statement">${esc(q.truth ? d.origin : d.fake.text)}</blockquote>
+      <div class="ox"><button class="choice" data-ox="o" aria-label="正しい">○</button><button class="choice" data-ox="x" aria-label="間違っている">×</button></div>`;
   } else if (S.mode === 'map') {
     return renderMapQuiz(q, d);
   }
   app.innerHTML = header() + `<section class="stage">${body}<div id="after" class="stack"></div></section>`;
   bindQuit();
   app.querySelectorAll('[data-pick]').forEach(b => b.onclick = () => answer(b.dataset.pick === d.c, b.dataset.pick));
+  app.querySelectorAll('[data-ox]').forEach(b => b.onclick = () => answerOX(b.dataset.ox === 'o'));
   const form = app.querySelector('#ans');
   if (form) {
     const input = form.querySelector('input');
@@ -209,6 +212,24 @@ function answer(ok, picked) {
   else if (!ok && picked) detail = `<p>あなたが選んだのは「${esc(BY[picked] ? BY[picked].ja : picked)}」の国旗</p>`;
   else detail = `<p>${esc(d.ja)}</p>`;
   showAfter(ok, detail);
+}
+
+function answerOX(saidTrue) {
+  const q = S.questions[S.i];
+  const d = BY[q.c];
+  const ok = saidTrue === q.truth;
+  if (ok) S.score++; else S.misses.push(q.c);
+  app.querySelectorAll('[data-ox]').forEach(b => {
+    b.disabled = true;
+    const isRight = (b.dataset.ox === 'o') === q.truth;
+    if (isRight) b.classList.add('ok');
+    else if ((b.dataset.ox === 'o') === saidTrue) b.classList.add('ng');
+  });
+  // 間違い文だった場合は、書き換えた部分と正しい部分を並べて見せる
+  const fix = q.truth
+    ? '<p>この説明は正しい(○)。</p>'
+    : `<p>この説明は間違い(×)。</p><p class="fix"><del>${esc(d.fake.from)}</del><br>正しくは <ins>${esc(d.fake.to)}</ins></p>`;
+  showAfter(ok, `${fix}<p class="small muted">${esc(d.origin)}</p><p class="small">出典: <a href="${esc(d.src)}" target="_blank" rel="noopener">Wikipedia「${esc(d.srcTitle)}」</a></p>`);
 }
 
 function showAfter(ok, detail) {
