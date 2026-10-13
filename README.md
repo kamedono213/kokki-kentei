@@ -16,4 +16,5 @@
 ## 作り方
 - `node data/build.js` … `app/data/countries.json` と `app/data/world.json` を作る
 - `node serve.js` … http://localhost:5390 でローカル確認
-- 公開版(Artifact): https://claude.ai/artifact/9qb3q4wnmKjc7XjbWXF2vS
+- PWA版(GitHub Pages): https://kamedono213.github.io/kokki-kentei/ … `node tools/build-pages.js` で docs/ を作り直して push すると更新される
+- Artifact版: https://claude.ai/artifact/9qb3q4wnmKjc7XjbWXF2vS
