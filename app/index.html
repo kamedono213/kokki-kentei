@@ -110,6 +110,17 @@ legend { font-weight: 700; margin-bottom: 8px; }
 .fix ins { color: var(--ok); text-decoration: none; font-weight: 700; }
 .answer-form { display: grid; gap: 10px; width: 100%; }
 .answer-form input { font: inherit; font-size: 20px; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); color: var(--ink); width: 100%; box-sizing: border-box; }
+/* ひらがなキーボード: 50音表と同じく右から あ行・か行…と縦に並べる */
+.kana { display: grid; gap: 6px; width: 100%; user-select: none; -webkit-user-select: none; }
+.kana-grid { display: grid; grid-template-rows: repeat(5, auto); grid-auto-flow: column; grid-auto-columns: 1fr; direction: rtl; gap: 4px; }
+.kana-fn { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; }
+.key { min-width: 0; height: 40px; padding: 0; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--ink); font-size: 17px; font-family: var(--body); touch-action: manipulation; }
+.key:active { background: var(--accent); color: var(--accent-ink); }
+.key.blank { border: 0; background: none; }
+.key.fn { font-weight: 700; background: var(--bg); }
+.key.del { color: var(--ng); }
+.answer-form input[readonly] { caret-color: transparent; }
+.kbd-switch { justify-self: center; font-size: 13px; font-weight: 500; }
 .verdict { width: 100%; border-radius: var(--r); padding: 12px 14px; display: grid; gap: 4px; background: var(--surface); border: 1px solid var(--line); }
 .verdict b { font-size: 18px; }
 .verdict.ok b { color: var(--ok); } .verdict.ng b { color: var(--ng); }
