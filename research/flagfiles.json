@@ -1,0 +1,1184 @@
+{
+ "jp": {
+  "title": "Flag of Japan",
+  "image": "Flag_of_Japan.svg",
+  "revid": 1379589879,
+  "ts": "2026-10-10T21:40:23Z"
+ },
+ "kp": {
+  "title": "Flag of North Korea",
+  "image": "Flag_of_North_Korea_(20-33).svg",
+  "revid": 1378686177,
+  "ts": "2026-10-05T17:53:42Z"
+ },
+ "kr": {
+  "title": "Flag of South Korea",
+  "image": "Flag_of_South_Korea.svg",
+  "revid": 1377626318,
+  "ts": "2026-09-30T06:35:36Z"
+ },
+ "cn": {
+  "title": "Flag of China",
+  "image": "Flag_of_the_People's_Republic_of_China.svg",
+  "revid": 1376931584,
+  "ts": "2026-09-27T01:34:01Z"
+ },
+ "mn": {
+  "title": "Flag of Mongolia",
+  "image": "Flag_of_Mongolia.svg",
+  "revid": 1375778602,
+  "ts": "2026-09-20T00:53:03Z"
+ },
+ "in": {
+  "title": "Flag of India",
+  "image": "Flag_of_India.svg",
+  "revid": 1379328773,
+  "ts": "2026-10-09T07:48:30Z"
+ },
+ "id": {
+  "title": "Flag of Indonesia",
+  "image": "Flag_of_Indonesia.svg",
+  "revid": 1376297135,
+  "ts": "2026-09-23T08:09:10Z"
+ },
+ "kh": {
+  "title": "Flag of Cambodia",
+  "image": "Flag_of_Cambodia.svg",
+  "revid": 1374473882,
+  "ts": "2026-09-12T07:45:55Z"
+ },
+ "sg": {
+  "title": "Flag of Singapore",
+  "image": "Flag_of_Singapore.svg",
+  "revid": 1376625655,
+  "ts": "2026-09-25T07:40:47Z"
+ },
+ "lk": {
+  "title": "Flag of Sri Lanka",
+  "image": "Flag_of_Sri_Lanka.svg",
+  "revid": 1377851455,
+  "ts": "2026-10-01T14:31:22Z"
+ },
+ "th": {
+  "title": "Flag of Thailand",
+  "image": "Flag_of_Thailand.svg",
+  "revid": 1379144907,
+  "ts": "2026-10-08T05:28:59Z"
+ },
+ "np": {
+  "title": "Flag of Nepal",
+  "image": "Flag_of_Nepal.svg",
+  "revid": 1378864468,
+  "ts": "2026-10-06T16:06:31Z"
+ },
+ "pk": {
+  "title": "Flag of Pakistan",
+  "image": "Flag_of_Pakistan.svg",
+  "revid": 1376442808,
+  "ts": "2026-09-24T04:42:44Z"
+ },
+ "bd": {
+  "title": "Flag of Bangladesh",
+  "image": "Flag_of_Bangladesh.svg",
+  "revid": 1373762569,
+  "ts": "2026-09-07T19:58:23Z"
+ },
+ "tl": {
+  "title": "Flag of Timor-Leste",
+  "image": "Flag_of_East_Timor.svg",
+  "revid": 1362223984,
+  "ts": "2026-07-02T16:38:32Z"
+ },
+ "ph": {
+  "title": "Flag of the Philippines",
+  "image": "Flag_of_the_Philippines.svg",
+  "revid": 1379643043,
+  "ts": "2026-10-11T03:10:48Z"
+ },
+ "bt": {
+  "title": "Flag of Bhutan",
+  "image": "Flag_of_Bhutan.svg",
+  "revid": 1377676342,
+  "ts": "2026-09-30T14:17:00Z"
+ },
+ "bn": {
+  "title": "Flag of Brunei",
+  "image": "Flag_of_Brunei.svg",
+  "revid": 1374735358,
+  "ts": "2026-09-13T20:52:12Z"
+ },
+ "vn": {
+  "title": "Flag of Vietnam",
+  "image": "Flag_of_Vietnam.svg",
+  "revid": 1377606827,
+  "ts": "2026-09-30T04:07:29Z"
+ },
+ "my": {
+  "title": "Flag of Malaysia",
+  "image": "Flag_of_Malaysia.svg",
+  "revid": 1376897667,
+  "ts": "2026-09-26T21:23:10Z"
+ },
+ "mm": {
+  "title": "Flag of Myanmar",
+  "image": "Flag_of_Myanmar.svg",
+  "revid": 1367840387,
+  "ts": "2026-08-05T14:21:54Z"
+ },
+ "mv": {
+  "title": "Flag of the Maldives",
+  "image": "Flag_of_Maldives.svg",
+  "revid": 1345752089,
+  "ts": "2026-03-27T23:49:34Z"
+ },
+ "la": {
+  "title": "Flag of Laos",
+  "image": "Flag_of_Laos.svg",
+  "revid": 1377818459,
+  "ts": "2026-10-01T08:09:13Z"
+ },
+ "af": {
+  "title": "Flag of Afghanistan",
+  "image": "Flag_of_the_Taliban.svg",
+  "revid": 1376900313,
+  "ts": "2026-09-26T21:44:36Z"
+ },
+ "ae": {
+  "title": "Flag of the United Arab Emirates",
+  "image": "Flag_of_the_United_Arab_Emirates.svg",
+  "revid": 1373668635,
+  "ts": "2026-09-07T05:27:23Z"
+ },
+ "ye": {
+  "title": "Flag of Yemen",
+  "image": "Flag_of_Yemen.svg",
+  "revid": 1377202277,
+  "ts": "2026-09-28T07:52:46Z"
+ },
+ "il": {
+  "title": "Flag of Israel",
+  "image": "Flag_of_Israel.svg",
+  "revid": 1372714574,
+  "ts": "2026-09-01T23:16:14Z"
+ },
+ "iq": {
+  "title": "Flag of Iraq",
+  "image": "Flag_of_Iraq.svg",
+  "revid": 1379788944,
+  "ts": "2026-10-11T23:32:20Z"
+ },
+ "ir": {
+  "title": "Flag of Iran",
+  "image": "Flag_of_Iran.svg",
+  "revid": 1379730824,
+  "ts": "2026-10-11T16:39:33Z"
+ },
+ "om": {
+  "title": "Flag of Oman",
+  "image": "Flag_of_Oman.svg",
+  "revid": 1372535070,
+  "ts": "2026-09-01T03:51:49Z"
+ },
+ "qa": {
+  "title": "Flag of Qatar",
+  "image": "Flag_of_Qatar.svg",
+  "revid": 1340007737,
+  "ts": "2026-02-23T12:18:56Z"
+ },
+ "kw": {
+  "title": "Flag of Kuwait",
+  "image": "Flag_of_Kuwait.svg",
+  "revid": 1374092064,
+  "ts": "2026-09-09T20:04:47Z"
+ },
+ "sa": {
+  "title": "Flag of Saudi Arabia",
+  "image": "Flag_of_Saudi_Arabia.svg",
+  "revid": 1379933229,
+  "ts": "2026-10-12T19:43:01Z"
+ },
+ "sy": {
+  "title": "Flag of Syria",
+  "image": "Flag_of_Syria_(2025-).svg",
+  "revid": 1378283205,
+  "ts": "2026-10-03T20:31:01Z"
+ },
+ "tr": {
+  "title": "Flag of Turkey",
+  "image": "Flag_of_Turkey.svg",
+  "revid": 1373769448,
+  "ts": "2026-09-07T20:44:08Z"
+ },
+ "bh": {
+  "title": "Flag of Bahrain",
+  "image": "Flag_of_Bahrain.svg",
+  "revid": 1340008037,
+  "ts": "2026-02-23T12:21:50Z"
+ },
+ "jo": {
+  "title": "Flag of Jordan",
+  "image": "Flag_of_Jordan.svg",
+  "revid": 1378948581,
+  "ts": "2026-10-07T01:57:36Z"
+ },
+ "lb": {
+  "title": "Flag of Lebanon",
+  "image": "Flag_of_Lebanon.svg",
+  "revid": 1374326069,
+  "ts": "2026-09-11T09:06:11Z"
+ },
+ "kz": {
+  "title": "Flag of Kazakhstan",
+  "image": "Flag_of_Kazakhstan.svg",
+  "revid": 1376457970,
+  "ts": "2026-09-24T06:49:59Z"
+ },
+ "uz": {
+  "title": "Flag of Uzbekistan",
+  "image": "Flag_of_Uzbekistan.svg",
+  "revid": 1374106624,
+  "ts": "2026-09-09T21:59:44Z"
+ },
+ "kg": {
+  "title": "Flag of Kyrgyzstan",
+  "image": "Flag_of_Kyrgyzstan.svg",
+  "revid": 1373762710,
+  "ts": "2026-09-07T19:59:18Z"
+ },
+ "tj": {
+  "title": "Flag of Tajikistan",
+  "image": "Flag_of_Tajikistan.svg",
+  "revid": 1376687489,
+  "ts": "2026-09-25T17:42:10Z"
+ },
+ "tm": {
+  "title": "Flag of Turkmenistan",
+  "image": "Flag_of_Turkmenistan.svg",
+  "revid": 1376570981,
+  "ts": "2026-09-25T00:34:06Z"
+ },
+ "ge": {
+  "title": "Flag of Georgia (country)",
+  "image": "Flag_of_Georgia.svg",
+  "revid": 1370329206,
+  "ts": "2026-08-20T14:04:59Z"
+ },
+ "am": {
+  "title": "Flag of Armenia",
+  "image": "Flag_of_Armenia.svg",
+  "revid": 1379630610,
+  "ts": "2026-10-11T01:48:48Z"
+ },
+ "az": {
+  "title": "Flag of Azerbaijan",
+  "image": "Flag_of_Azerbaijan.svg",
+  "revid": 1373367673,
+  "ts": "2026-09-05T16:29:07Z"
+ },
+ "is": {
+  "title": "Flag of Iceland",
+  "image": "Flag_of_Iceland.svg",
+  "revid": 1377001383,
+  "ts": "2026-09-27T10:46:15Z"
+ },
+ "ie": {
+  "title": "Flag of Ireland",
+  "image": "Flag_of_Ireland.svg",
+  "revid": 1376546679,
+  "ts": "2026-09-24T21:03:02Z"
+ },
+ "al": {
+  "title": "Flag of Albania",
+  "image": "Flag_of_Albania.svg",
+  "revid": 1371838511,
+  "ts": "2026-08-28T20:00:25Z"
+ },
+ "ad": {
+  "title": "Flag of Andorra",
+  "image": "Flag_of_Andorra.svg",
+  "revid": 1358650396,
+  "ts": "2026-06-10T02:10:20Z"
+ },
+ "it": {
+  "title": "Flag of Italy",
+  "image": "Flag_of_Italy.svg",
+  "revid": 1374221809,
+  "ts": "2026-09-10T16:39:44Z"
+ },
+ "ua": {
+  "title": "Flag of Ukraine",
+  "image": "Flag_of_Ukraine.svg",
+  "revid": 1379071401,
+  "ts": "2026-10-07T19:38:02Z"
+ },
+ "gb": {
+  "title": "Union Jack",
+  "image": "Flag_of_the_United_Kingdom.svg",
+  "revid": 1379922452,
+  "ts": "2026-10-12T18:13:17Z"
+ },
+ "ee": {
+  "title": "Flag of Estonia",
+  "image": "Flag_of_Estonia.svg",
+  "revid": 1375718763,
+  "ts": "2026-09-19T16:12:45Z"
+ },
+ "at": {
+  "title": "Flag of Austria",
+  "image": "Flag_of_Austria.svg",
+  "revid": 1379745876,
+  "ts": "2026-10-11T18:28:31Z"
+ },
+ "nl": {
+  "title": "Flag of the Netherlands",
+  "image": "Flag_of_the_Netherlands.svg",
+  "revid": 1379401751,
+  "ts": "2026-10-09T20:00:07Z"
+ },
+ "mk": {
+  "title": "Flag of North Macedonia",
+  "image": "Flag_of_North_Macedonia.svg",
+  "revid": 1378847204,
+  "ts": "2026-10-06T13:30:19Z"
+ },
+ "cy": {
+  "title": "Flag of Cyprus",
+  "image": "Flag_of_Cyprus.svg",
+  "revid": 1375735198,
+  "ts": "2026-09-19T18:35:32Z"
+ },
+ "gr": {
+  "title": "Flag of Greece",
+  "image": "Flag_of_Greece.svg",
+  "revid": 1373838111,
+  "ts": "2026-09-08T06:07:09Z"
+ },
+ "hr": {
+  "title": "Flag of Croatia",
+  "image": "Flag_of_Croatia.svg",
+  "revid": 1373862746,
+  "ts": "2026-09-08T11:13:19Z"
+ },
+ "xk": {
+  "title": "Flag of Kosovo",
+  "image": "Flag_of_Kosovo.svg",
+  "revid": 1376966337,
+  "ts": "2026-09-27T04:34:40Z"
+ },
+ "sm": {
+  "title": "Flag of San Marino",
+  "image": "Flag_of_San_Marino.svg",
+  "revid": 1377676973,
+  "ts": "2026-09-30T14:22:42Z"
+ },
+ "ch": {
+  "title": "Flag of Switzerland",
+  "image": "Flag_of_Switzerland_(Pantone).svg",
+  "revid": 1376743370,
+  "ts": "2026-09-26T00:28:05Z"
+ },
+ "se": {
+  "title": "Flag of Sweden",
+  "image": "Flag_of_Sweden.svg",
+  "revid": 1377121660,
+  "ts": "2026-09-28T00:18:03Z"
+ },
+ "es": {
+  "title": "Flag of Spain",
+  "image": "Flag_of_the_Kingdom_of_Spain.svg",
+  "revid": 1378636267,
+  "ts": "2026-10-05T10:41:29Z"
+ },
+ "sk": {
+  "title": "Flag of Slovakia",
+  "image": "Flag_of_Slovakia.svg",
+  "revid": 1378073162,
+  "ts": "2026-10-02T20:34:31Z"
+ },
+ "si": {
+  "title": "Flag of Slovenia",
+  "image": "Flag_of_Slovenia.svg",
+  "revid": 1379913493,
+  "ts": "2026-10-12T17:01:20Z"
+ },
+ "rs": {
+  "title": "Flag of Serbia",
+  "image": "Flag_of_Serbia.svg",
+  "revid": 1375717581,
+  "ts": "2026-09-19T16:00:16Z"
+ },
+ "cz": {
+  "title": "Flag of the Czech Republic",
+  "image": "Flag_of_the_Czech_Republic.svg",
+  "revid": 1378402097,
+  "ts": "2026-10-04T08:33:31Z"
+ },
+ "dk": {
+  "title": "Dannebrog",
+  "image": "Flag_of_Denmark.svg",
+  "revid": 1370309615,
+  "ts": "2026-08-20T10:37:52Z"
+ },
+ "de": {
+  "title": "Flag of Germany",
+  "image": "Flag_of_Germany.svg",
+  "revid": 1377176305,
+  "ts": "2026-09-28T04:59:15Z"
+ },
+ "no": {
+  "title": "Flag of Norway",
+  "image": "Flag_of_Norway.svg",
+  "revid": 1372599035,
+  "ts": "2026-09-01T11:52:49Z"
+ },
+ "va": {
+  "title": "Flag of Vatican City",
+  "image": "Flag_of_Vatican_City_(2023–present).svg",
+  "revid": 1364129773,
+  "ts": "2026-07-14T18:02:05Z"
+ },
+ "hu": {
+  "title": "Flag of Hungary",
+  "image": "Flag_of_Hungary.svg",
+  "revid": 1377671030,
+  "ts": "2026-09-30T13:30:26Z"
+ },
+ "fi": {
+  "title": "Flag of Finland",
+  "image": "Flag_of_Finland.svg",
+  "revid": 1365486991,
+  "ts": "2026-07-22T19:38:47Z"
+ },
+ "fr": {
+  "title": "Flag of France",
+  "image": "Flag_of_France.svg",
+  "revid": 1374253646,
+  "ts": "2026-09-10T21:00:09Z"
+ },
+ "bg": {
+  "title": "Flag of Bulgaria",
+  "image": "Flag_of_Bulgaria.svg",
+  "revid": 1370515530,
+  "ts": "2026-08-21T15:42:42Z"
+ },
+ "by": {
+  "title": "Flag of Belarus",
+  "image": "Flag_of_Belarus.svg",
+  "revid": 1370593342,
+  "ts": "2026-08-22T00:55:18Z"
+ },
+ "be": {
+  "title": "Flag of Belgium",
+  "image": "Flag_of_Belgium.svg",
+  "revid": 1376492944,
+  "ts": "2026-09-24T13:40:59Z"
+ },
+ "pl": {
+  "title": "Flag of Poland",
+  "image": "Flag_of_Poland.svg",
+  "revid": 1379080691,
+  "ts": "2026-10-07T20:51:16Z"
+ },
+ "ba": {
+  "title": "Flag of Bosnia and Herzegovina",
+  "image": "Flag_of_Bosnia_and_Herzegovina.svg",
+  "revid": 1377844405,
+  "ts": "2026-10-01T13:28:16Z"
+ },
+ "pt": {
+  "title": "Flag of Portugal",
+  "image": "Flag_of_Portugal_(official).svg",
+  "revid": 1371830101,
+  "ts": "2026-08-28T18:58:44Z"
+ },
+ "mt": {
+  "title": "Flag of Malta",
+  "image": "Flag_of_Malta.svg",
+  "revid": 1371016040,
+  "ts": "2026-08-24T03:51:16Z"
+ },
+ "mc": {
+  "title": "Flag of Monaco",
+  "image": "Flag_of_Monaco.svg",
+  "revid": 1367034076,
+  "ts": "2026-07-31T15:12:40Z"
+ },
+ "md": {
+  "title": "Flag of Moldova",
+  "image": "Flag_of_Moldova.svg",
+  "revid": 1377468263,
+  "ts": "2026-09-29T15:04:17Z"
+ },
+ "me": {
+  "title": "Flag of Montenegro",
+  "image": "Flag_of_Montenegro.svg",
+  "revid": 1376164679,
+  "ts": "2026-09-22T13:24:17Z"
+ },
+ "lv": {
+  "title": "Flag of Latvia",
+  "image": "Flag_of_Latvia.svg",
+  "revid": 1379745791,
+  "ts": "2026-10-11T18:27:51Z"
+ },
+ "li": {
+  "title": "Flag of Liechtenstein",
+  "image": "Flag_of_Liechtenstein.svg",
+  "revid": 1376872980,
+  "ts": "2026-09-26T18:45:12Z"
+ },
+ "lt": {
+  "title": "Flag of Lithuania",
+  "image": "Flag_of_Lithuania.svg",
+  "revid": 1375638541,
+  "ts": "2026-09-19T02:18:19Z"
+ },
+ "ro": {
+  "title": "Flag of Romania",
+  "image": "Flag_of_Romania.svg",
+  "revid": 1379634192,
+  "ts": "2026-10-11T02:11:48Z"
+ },
+ "lu": {
+  "title": "Flag of Luxembourg",
+  "image": "Flag_of_Luxembourg.svg",
+  "revid": 1376546366,
+  "ts": "2026-09-24T21:00:15Z"
+ },
+ "ru": {
+  "title": "Flag of Russia",
+  "image": "Flag_of_Russia.svg",
+  "revid": 1377826772,
+  "ts": "2026-10-01T10:02:21Z"
+ },
+ "dz": {
+  "title": "Flag of Algeria",
+  "image": "Flag_of_Algeria.svg",
+  "revid": 1377838942,
+  "ts": "2026-10-01T12:37:18Z"
+ },
+ "ao": {
+  "title": "Flag of Angola",
+  "image": "Flag_of_Angola_using_the_specifications_prescribed_in_\"Manual_Simbolos_Nacionais\",_V01.05.2021D.svg",
+  "revid": 1375265721,
+  "ts": "2026-09-16T20:10:48Z"
+ },
+ "ug": {
+  "title": "Flag of Uganda",
+  "image": "Flag_of_Uganda.svg",
+  "revid": 1379371839,
+  "ts": "2026-10-09T15:47:25Z"
+ },
+ "eg": {
+  "title": "Flag of Egypt",
+  "image": "Flag_of_Egypt.svg",
+  "revid": 1378370101,
+  "ts": "2026-10-04T04:27:13Z"
+ },
+ "sz": {
+  "title": "Flag of Eswatini",
+  "image": "Flag_of_Eswatini.svg",
+  "revid": 1375758033,
+  "ts": "2026-09-19T21:58:19Z"
+ },
+ "et": {
+  "title": "Flag of Ethiopia",
+  "image": "Flag_of_Ethiopia.svg",
+  "revid": 1374615226,
+  "ts": "2026-09-13T03:29:43Z"
+ },
+ "er": {
+  "title": "Flag of Eritrea",
+  "image": "Flag_of_Eritrea.svg",
+  "revid": 1367781274,
+  "ts": "2026-08-05T04:06:10Z"
+ },
+ "gh": {
+  "title": "Flag of Ghana",
+  "image": "Flag_of_Ghana.svg",
+  "revid": 1360659495,
+  "ts": "2026-06-22T20:43:12Z"
+ },
+ "cv": {
+  "title": "Flag of Cape Verde",
+  "image": "Flag_of_Cape_Verde_(3-2).svg",
+  "revid": 1376842958,
+  "ts": "2026-09-26T15:35:03Z"
+ },
+ "ga": {
+  "title": "Flag of Gabon",
+  "image": "Flag_of_Gabon.svg",
+  "revid": 1372780641,
+  "ts": "2026-09-02T06:26:08Z"
+ },
+ "cm": {
+  "title": "Flag of Cameroon",
+  "image": "Flag_of_Cameroon.svg",
+  "revid": 1366570575,
+  "ts": "2026-07-28T20:08:02Z"
+ },
+ "gm": {
+  "title": "Flag of the Gambia",
+  "image": "Flag_of_The_Gambia.svg",
+  "revid": 1375189505,
+  "ts": "2026-09-16T09:29:16Z"
+ },
+ "gn": {
+  "title": "Flag of Guinea",
+  "image": "Flag_of_Guinea.svg",
+  "revid": 1365387167,
+  "ts": "2026-07-22T02:26:40Z"
+ },
+ "gw": {
+  "title": "Flag of Guinea-Bissau",
+  "image": "Flag_of_Guinea-Bissau.svg",
+  "revid": 1368715154,
+  "ts": "2026-08-10T18:03:03Z"
+ },
+ "ke": {
+  "title": "Flag of Kenya",
+  "image": "Flag_of_Kenya.svg",
+  "revid": 1378828147,
+  "ts": "2026-10-06T10:07:41Z"
+ },
+ "ci": {
+  "title": "Flag of Ivory Coast",
+  "image": "Flag_of_Côte_d'Ivoire.svg",
+  "revid": 1374925360,
+  "ts": "2026-09-14T21:48:35Z"
+ },
+ "km": {
+  "title": "Flag of the Comoros",
+  "image": "Flag_of_the_Comoros.svg",
+  "revid": 1378562009,
+  "ts": "2026-10-05T00:58:06Z"
+ },
+ "cg": {
+  "title": "Flag of the Republic of the Congo",
+  "image": "Flag_of_the_Republic_of_the_Congo.svg",
+  "revid": 1375920003,
+  "ts": "2026-09-20T21:47:26Z"
+ },
+ "cd": {
+  "title": "Flag of the Democratic Republic of the Congo",
+  "image": "Flag_of_the_Democratic_Republic_of_the_Congo.svg",
+  "revid": 1365826868,
+  "ts": "2026-07-24T17:22:46Z"
+ },
+ "st": {
+  "title": "Flag of São Tomé and Príncipe",
+  "image": "Flag_of_São_Tomé_and_Príncipe.svg",
+  "revid": 1367627505,
+  "ts": "2026-08-04T05:53:59Z"
+ },
+ "zm": {
+  "title": "Flag of Zambia",
+  "image": "Flag_of_Zambia.svg",
+  "revid": 1366085983,
+  "ts": "2026-07-26T04:52:53Z"
+ },
+ "sl": {
+  "title": "Flag of Sierra Leone",
+  "image": "Flag_of_Sierra_Leone.svg",
+  "revid": 1374183307,
+  "ts": "2026-09-10T09:59:53Z"
+ },
+ "dj": {
+  "title": "Flag of Djibouti",
+  "image": "Flag_of_Djibouti.svg",
+  "revid": 1364641170,
+  "ts": "2026-07-17T17:45:00Z"
+ },
+ "zw": {
+  "title": "Flag of Zimbabwe",
+  "image": "Flag_of_Zimbabwe.svg",
+  "revid": 1375284537,
+  "ts": "2026-09-16T22:40:53Z"
+ },
+ "sd": {
+  "title": "Flag of Sudan",
+  "image": "Flag_of_Sudan.svg",
+  "revid": 1378246651,
+  "ts": "2026-10-03T17:38:31Z"
+ },
+ "sc": {
+  "title": "Flag of Seychelles",
+  "image": "Flag_of_Seychelles.svg",
+  "revid": 1364641185,
+  "ts": "2026-07-17T17:45:05Z"
+ },
+ "gq": {
+  "title": "Flag of Equatorial Guinea",
+  "image": "Flag_of_Equatorial_Guinea.svg",
+  "revid": 1364716168,
+  "ts": "2026-07-18T03:00:59Z"
+ },
+ "sn": {
+  "title": "Flag of Senegal",
+  "image": "Flag_of_Senegal.svg",
+  "revid": 1359838112,
+  "ts": "2026-06-17T14:53:57Z"
+ },
+ "so": {
+  "title": "Flag of Somalia",
+  "image": "Flag_of_Somalia.svg",
+  "revid": 1376691747,
+  "ts": "2026-09-25T18:11:04Z"
+ },
+ "tz": {
+  "title": "Flag of Tanzania",
+  "image": "Flag_of_Tanzania.svg",
+  "revid": 1367642736,
+  "ts": "2026-08-04T08:34:35Z"
+ },
+ "td": {
+  "title": "Flag of Chad",
+  "image": "Flag_of_Chad.svg",
+  "revid": 1378528676,
+  "ts": "2026-10-04T22:19:31Z"
+ },
+ "cf": {
+  "title": "Flag of the Central African Republic",
+  "image": "Flag_of_the_Central_African_Republic.svg",
+  "revid": 1371825991,
+  "ts": "2026-08-28T18:22:51Z"
+ },
+ "tn": {
+  "title": "Flag of Tunisia",
+  "image": "Flag_of_Tunisia.svg",
+  "revid": 1357917339,
+  "ts": "2026-06-05T13:11:19Z"
+ },
+ "tg": {
+  "title": "Flag of Togo",
+  "image": "Flag_of_Togo.svg",
+  "revid": 1376842675,
+  "ts": "2026-09-26T15:33:33Z"
+ },
+ "ng": {
+  "title": "Flag of Nigeria",
+  "image": "Flag_of_Nigeria.svg",
+  "revid": 1377866381,
+  "ts": "2026-10-01T16:40:53Z"
+ },
+ "na": {
+  "title": "Flag of Namibia",
+  "image": "Flag_of_Namibia.svg",
+  "revid": 1373762761,
+  "ts": "2026-09-07T19:59:36Z"
+ },
+ "ne": {
+  "title": "Flag of Niger",
+  "image": "Flag_of_Niger.svg",
+  "revid": 1373976469,
+  "ts": "2026-09-09T02:25:31Z"
+ },
+ "bf": {
+  "title": "Flag of Burkina Faso",
+  "image": "Flag_of_Burkina_Faso.svg",
+  "revid": 1361797654,
+  "ts": "2026-06-30T04:06:48Z"
+ },
+ "bi": {
+  "title": "Flag of Burundi",
+  "image": "Flag_of_Burundi.svg",
+  "revid": 1357757983,
+  "ts": "2026-06-04T14:21:16Z"
+ },
+ "bj": {
+  "title": "Flag of Benin",
+  "image": "Flag_of_Benin.svg",
+  "revid": 1335685961,
+  "ts": "2026-01-30T16:43:45Z"
+ },
+ "bw": {
+  "title": "Flag of Botswana",
+  "image": "Flag_of_Botswana.svg",
+  "revid": 1373269019,
+  "ts": "2026-09-05T00:08:16Z"
+ },
+ "mg": {
+  "title": "Flag of Madagascar",
+  "image": "Flag_of_Madagascar.svg",
+  "revid": 1365177398,
+  "ts": "2026-07-20T19:40:14Z"
+ },
+ "mw": {
+  "title": "Flag of Malawi",
+  "image": "Flag_of_Malawi.svg",
+  "revid": 1373762726,
+  "ts": "2026-09-07T19:59:24Z"
+ },
+ "ml": {
+  "title": "Flag of Mali",
+  "image": "Flag_of_Mali.svg",
+  "revid": 1365386975,
+  "ts": "2026-07-22T02:24:58Z"
+ },
+ "za": {
+  "title": "Flag of South Africa",
+  "image": "Flag_of_South_Africa.svg",
+  "revid": 1372714584,
+  "ts": "2026-09-01T23:16:18Z"
+ },
+ "ss": {
+  "title": "Flag of South Sudan",
+  "image": "Flag_of_South_Sudan.svg",
+  "revid": 1377191434,
+  "ts": "2026-09-28T06:25:15Z"
+ },
+ "mz": {
+  "title": "Flag of Mozambique",
+  "image": "Flag_of_Mozambique.svg",
+  "revid": 1375772043,
+  "ts": "2026-09-20T00:10:42Z"
+ },
+ "mu": {
+  "title": "Flag of Mauritius",
+  "image": "Flag_of_Mauritius.svg",
+  "revid": 1375371688,
+  "ts": "2026-09-17T11:55:09Z"
+ },
+ "mr": {
+  "title": "Flag of Mauritania",
+  "image": "Flag_of_Mauritania.svg",
+  "revid": 1369884474,
+  "ts": "2026-08-17T20:04:59Z"
+ },
+ "ma": {
+  "title": "Flag of Morocco",
+  "image": "Flag_of_Morocco.svg",
+  "revid": 1379872802,
+  "ts": "2026-10-12T11:04:53Z"
+ },
+ "ly": {
+  "title": "Flag of Libya",
+  "image": "Flag_of_Libya.svg",
+  "revid": 1372688313,
+  "ts": "2026-09-01T20:34:11Z"
+ },
+ "lr": {
+  "title": "Flag of Liberia",
+  "image": "Flag_of_Liberia.svg",
+  "revid": 1370753851,
+  "ts": "2026-08-22T22:34:54Z"
+ },
+ "rw": {
+  "title": "Flag of Rwanda",
+  "image": "Flag_of_Rwanda.svg",
+  "revid": 1373762845,
+  "ts": "2026-09-07T20:00:04Z"
+ },
+ "ls": {
+  "title": "Flag of Lesotho",
+  "image": "Flag_of_Lesotho.svg",
+  "revid": 1373372512,
+  "ts": "2026-09-05T16:53:29Z"
+ },
+ "us": {
+  "title": "Flag of the United States",
+  "image": "Flag_of_the_United_States_(DDD-F-416E_specifications).svg",
+  "revid": 1378919390,
+  "ts": "2026-10-06T22:39:53Z"
+ },
+ "ca": {
+  "title": "Flag of Canada",
+  "image": "Flag_of_Canada_(Pantone).svg",
+  "revid": 1379551073,
+  "ts": "2026-10-10T17:27:15Z"
+ },
+ "mx": {
+  "title": "Flag of Mexico",
+  "image": "Flag_of_Mexico.svg",
+  "revid": 1377677478,
+  "ts": "2026-09-30T14:27:30Z"
+ },
+ "gt": {
+  "title": "Flag of Guatemala",
+  "image": "Flag_of_Guatemala.svg",
+  "revid": 1373552343,
+  "ts": "2026-09-06T16:24:09Z"
+ },
+ "bz": {
+  "title": "Flag of Belize",
+  "image": "Flag_of_Belize.svg",
+  "revid": 1370657256,
+  "ts": "2026-08-22T09:49:24Z"
+ },
+ "hn": {
+  "title": "Flag of Honduras",
+  "image": "Flag_of_Honduras_(1949–2022,_2026–present).svg",
+  "revid": 1377586842,
+  "ts": "2026-09-30T02:26:13Z"
+ },
+ "sv": {
+  "title": "Flag of El Salvador",
+  "image": "Flag_of_El_Salvador.svg",
+  "revid": 1356640618,
+  "ts": "2026-05-29T00:12:05Z"
+ },
+ "ni": {
+  "title": "Flag of Nicaragua",
+  "image": "Flag_of_Nicaragua.svg",
+  "revid": 1374977818,
+  "ts": "2026-09-15T04:00:33Z"
+ },
+ "cr": {
+  "title": "Flag of Costa Rica",
+  "image": "Flag_of_Costa_Rica.svg",
+  "revid": 1369298379,
+  "ts": "2026-08-14T03:52:31Z"
+ },
+ "pa": {
+  "title": "Flag of Panama",
+  "image": "Flag_of_Panama.svg",
+  "revid": 1369121488,
+  "ts": "2026-08-13T01:37:50Z"
+ },
+ "ag": {
+  "title": "Flag of Antigua and Barbuda",
+  "image": "Flag_of_Antigua_and_Barbuda.svg",
+  "revid": 1373762550,
+  "ts": "2026-09-07T19:58:17Z"
+ },
+ "bs": {
+  "title": "Flag of the Bahamas",
+  "image": "Flag_of_the_Bahamas.svg",
+  "revid": 1372688355,
+  "ts": "2026-09-01T20:34:24Z"
+ },
+ "bb": {
+  "title": "Flag of Barbados",
+  "image": "Flag_of_Barbados.svg",
+  "revid": 1372688340,
+  "ts": "2026-09-01T20:34:19Z"
+ },
+ "cu": {
+  "title": "Flag of Cuba",
+  "image": "Flag_of_Cuba.svg",
+  "revid": 1379239085,
+  "ts": "2026-10-08T19:50:23Z"
+ },
+ "dm": {
+  "title": "Flag of Dominica",
+  "image": "Flag_of_Dominica.svg",
+  "revid": 1379136060,
+  "ts": "2026-10-08T04:20:48Z"
+ },
+ "do": {
+  "title": "Flag of the Dominican Republic",
+  "image": "Flag_of_the_Dominican_Republic.svg",
+  "revid": 1377731741,
+  "ts": "2026-09-30T21:13:04Z"
+ },
+ "gd": {
+  "title": "Flag of Grenada",
+  "image": "Flag_of_Grenada.svg",
+  "revid": 1344631184,
+  "ts": "2026-03-21T17:03:16Z"
+ },
+ "ht": {
+  "title": "Flag of Haiti",
+  "image": "Flag_of_Haiti.svg",
+  "revid": 1379417421,
+  "ts": "2026-10-09T21:54:13Z"
+ },
+ "jm": {
+  "title": "Flag of Jamaica",
+  "image": "Flag_of_Jamaica.svg",
+  "revid": 1373552905,
+  "ts": "2026-09-06T16:27:09Z"
+ },
+ "kn": {
+  "title": "Flag of Saint Kitts and Nevis",
+  "image": "Flag_of_Saint_Kitts_and_Nevis.svg",
+  "revid": 1367585633,
+  "ts": "2026-08-04T00:14:13Z"
+ },
+ "lc": {
+  "title": "Flag of Saint Lucia",
+  "image": "Flag_of_Saint_Lucia.svg",
+  "revid": 1359160455,
+  "ts": "2026-06-13T14:14:06Z"
+ },
+ "vc": {
+  "title": "Flag of Saint Vincent and the Grenadines",
+  "image": "Flag_of_Saint_Vincent_and_the_Grenadines.svg",
+  "revid": 1372780654,
+  "ts": "2026-09-02T06:26:14Z"
+ },
+ "tt": {
+  "title": "Flag of Trinidad and Tobago",
+  "image": "Flag_of_Trinidad_and_Tobago.svg",
+  "revid": 1358510021,
+  "ts": "2026-06-09T03:42:35Z"
+ },
+ "ar": {
+  "title": "Flag of Argentina",
+  "image": "Flag_of_Argentina.svg",
+  "revid": 1377608375,
+  "ts": "2026-09-30T04:15:29Z"
+ },
+ "bo": {
+  "title": "Flag of Bolivia",
+  "image": "Flag_of_Bolivia.svg",
+  "revid": 1379835831,
+  "ts": "2026-10-12T04:59:50Z"
+ },
+ "br": {
+  "title": "Flag of Brazil",
+  "image": "Flag_of_Brazil.svg",
+  "revid": 1378304025,
+  "ts": "2026-10-03T22:17:07Z"
+ },
+ "cl": {
+  "title": "Flag of Chile",
+  "image": "Flag_of_Chile.svg",
+  "revid": 1372477326,
+  "ts": "2026-08-31T23:08:38Z"
+ },
+ "co": {
+  "title": "Flag of Colombia",
+  "image": "Flag_of_Colombia.svg",
+  "revid": 1372412805,
+  "ts": "2026-08-31T16:52:51Z"
+ },
+ "ec": {
+  "title": "Flag of Ecuador",
+  "image": "Flag_of_Ecuador.svg",
+  "revid": 1373762617,
+  "ts": "2026-09-07T19:58:44Z"
+ },
+ "gy": {
+  "title": "Flag of Guyana",
+  "image": "Flag_of_Guyana.svg",
+  "revid": 1374777272,
+  "ts": "2026-09-14T01:32:25Z"
+ },
+ "py": {
+  "title": "Flag of Paraguay",
+  "image": "Flag_of_Paraguay.svg",
+  "revid": 1379459886,
+  "ts": "2026-10-10T03:25:12Z"
+ },
+ "pe": {
+  "title": "Flag of Peru",
+  "image": "Flag_of_Peru.svg",
+  "revid": 1370935845,
+  "ts": "2026-08-23T20:34:43Z"
+ },
+ "sr": {
+  "title": "Flag of Suriname",
+  "image": "Flag_of_Suriname.svg",
+  "revid": 1364643569,
+  "ts": "2026-07-17T18:01:25Z"
+ },
+ "uy": {
+  "title": "Flag of Uruguay",
+  "image": "Flag_of_Uruguay.svg",
+  "revid": 1379705955,
+  "ts": "2026-10-11T13:06:19Z"
+ },
+ "ve": {
+  "title": "Flag of Venezuela",
+  "image": "Flag_of_Venezuela.svg",
+  "revid": 1361143417,
+  "ts": "2026-06-25T23:12:47Z"
+ },
+ "au": {
+  "title": "Flag of Australia",
+  "image": "Flag_of_Australia_(converted).svg",
+  "revid": 1379192196,
+  "ts": "2026-10-08T13:17:57Z"
+ },
+ "ki": {
+  "title": "Flag of Kiribati",
+  "image": "Flag_of_Kiribati.svg",
+  "revid": 1373762702,
+  "ts": "2026-09-07T19:59:14Z"
+ },
+ "ck": {
+  "title": "Flag of the Cook Islands",
+  "image": "Flag_of_the_Cook_Islands.svg",
+  "revid": 1376578597,
+  "ts": "2026-09-25T01:43:23Z"
+ },
+ "ws": {
+  "title": "Flag of Samoa",
+  "image": "Flag_of_Samoa.svg",
+  "revid": 1369914216,
+  "ts": "2026-08-18T00:15:58Z"
+ },
+ "sb": {
+  "title": "Flag of Solomon Islands",
+  "image": "Flag_of_the_Solomon_Islands.svg",
+  "revid": 1364439826,
+  "ts": "2026-07-16T14:55:52Z"
+ },
+ "tv": {
+  "title": "Flag of Tuvalu",
+  "image": "Flag_of_Tuvalu.svg",
+  "revid": 1379283511,
+  "ts": "2026-10-09T01:30:01Z"
+ },
+ "to": {
+  "title": "Flag of Tonga",
+  "image": "Flag_of_Tonga.svg",
+  "revid": 1379398668,
+  "ts": "2026-10-09T19:35:09Z"
+ },
+ "nr": {
+  "title": "Flag of Nauru",
+  "image": "Flag_of_Nauru.svg",
+  "revid": 1376512843,
+  "ts": "2026-09-24T16:27:20Z"
+ },
+ "nu": {
+  "title": "Flag of Niue",
+  "image": "Flag_of_Niue.svg",
+  "revid": 1358022065,
+  "ts": "2026-06-06T02:24:08Z"
+ },
+ "nz": {
+  "title": "Flag of New Zealand",
+  "image": "Flag_of_New_Zealand.svg",
+  "revid": 1377983945,
+  "ts": "2026-10-02T07:10:29Z"
+ },
+ "vu": {
+  "title": "Flag of Vanuatu",
+  "image": "Flag_of_Vanuatu_(official).svg",
+  "revid": 1377351407,
+  "ts": "2026-09-29T01:39:16Z"
+ },
+ "pg": {
+  "title": "Flag of Papua New Guinea",
+  "image": "Flag_of_Papua_New_Guinea.svg",
+  "revid": 1372259223,
+  "ts": "2026-08-31T01:43:17Z"
+ },
+ "pw": {
+  "title": "Flag of Palau",
+  "image": "Flag_of_Palau.svg",
+  "revid": 1364640364,
+  "ts": "2026-07-17T17:39:52Z"
+ },
+ "fj": {
+  "title": "Flag of Fiji",
+  "image": "Flag_of_Fiji.svg",
+  "revid": 1363287712,
+  "ts": "2026-07-09T06:46:28Z"
+ },
+ "mh": {
+  "title": "Flag of the Marshall Islands",
+  "image": "Flag_of_the_Marshall_Islands.svg",
+  "revid": 1376077161,
+  "ts": "2026-09-21T22:59:26Z"
+ },
+ "fm": {
+  "title": "Flag of the Federated States of Micronesia",
+  "image": "Flag_of_the_Federated_States_of_Micronesia.svg",
+  "revid": 1373813596,
+  "ts": "2026-09-08T02:29:05Z"
+ }
+}
