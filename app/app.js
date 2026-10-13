@@ -210,9 +210,11 @@ function renderQuiz() {
   } else if (S.mode === 'flag' && S.level === 'hard') {
     body = `<img class="flag big" src="${flagSrc(d.c)}" alt="この国旗はどこの国?">
       <form class="answer-form" id="ans" autocomplete="off">
-        <label class="prompt" for="name-input">この国旗の国名を入力(「・」や空白、ハイフン、コンマは入れなくてOK)</label>
-        <input id="name-input" name="name" type="text" inputmode="text" enterkeyhint="done" autocapitalize="off" spellcheck="false">
+        <label class="prompt" for="name-input">この国旗の国名を入力(ひらがなでOK。「・」や空白は入れなくてOK)</label>
+        <input id="name-input" name="name" type="text" enterkeyhint="done" autocapitalize="off" spellcheck="false" ${KANA.on ? 'readonly inputmode="none"' : 'inputmode="text"'}>
+        ${KANA.on ? kanaKeyboard() : ''}
         <button class="primary" type="submit">答える</button>
+        <button class="link kbd-switch" type="button" id="kbd-switch">${KANA.on ? '端末のキーボードで入力する' : 'ひらがなキーボードに戻す'}</button>
       </form>`;
   } else if (S.mode === 'origin') {
     body = `<img class="flag big" src="${flagSrc(d.c)}" alt="${esc(d.ja)}の国旗">
@@ -229,9 +231,47 @@ function renderQuiz() {
   const form = app.querySelector('#ans');
   if (form) {
     const input = form.querySelector('input');
-    setTimeout(() => input.focus(), 50);
-    form.onsubmit = e => { e.preventDefault(); if (!input.value.trim()) return; input.disabled = true; form.querySelector('button').disabled = true; answer(isCorrectName(input.value, d), input.value); };
+    if (KANA.on) bindKana(form, input); else setTimeout(() => input.focus(), 50);
+    form.querySelector('#kbd-switch').onclick = () => { KANA.set(!KANA.on); const v = input.value; renderQuiz(); const i2 = app.querySelector('#name-input'); i2.value = v; if (!KANA.on) i2.focus(); };
+    form.onsubmit = e => { e.preventDefault(); if (!input.value.trim()) return; input.disabled = true; form.querySelectorAll('button').forEach(b => b.disabled = true); answer(isCorrectName(input.value, d), input.value); };
   }
+}
+
+
+// ---------- ひらがなキーボード(ハードモード)。Webからは端末キーボードの言語を指定できないため、アプリ内に50音表を置く
+const KANA = {
+  on: (() => { try { return localStorage.getItem('kokki:kbd') !== 'device'; } catch (e) { return true; } })(),
+  set(v) { this.on = v; try { localStorage.setItem('kokki:kbd', v ? 'kana' : 'device'); } catch (e) {} },
+};
+// 50音表の列(右から あ行・か行…)。空欄は null
+const KANA_COLS = [
+  ['あ', 'い', 'う', 'え', 'お'], ['か', 'き', 'く', 'け', 'こ'], ['さ', 'し', 'す', 'せ', 'そ'],
+  ['た', 'ち', 'つ', 'て', 'と'], ['な', 'に', 'ぬ', 'ね', 'の'], ['は', 'ひ', 'ふ', 'へ', 'ほ'],
+  ['ま', 'み', 'む', 'め', 'も'], ['や', null, 'ゆ', null, 'よ'], ['ら', 'り', 'る', 'れ', 'ろ'], ['わ', null, 'を', null, 'ん'],
+];
+const DAKU = { か: 'が', き: 'ぎ', く: 'ぐ', け: 'げ', こ: 'ご', さ: 'ざ', し: 'じ', す: 'ず', せ: 'ぜ', そ: 'ぞ', た: 'だ', ち: 'ぢ', つ: 'づ', て: 'で', と: 'ど', は: 'ば', ひ: 'び', ふ: 'ぶ', へ: 'べ', ほ: 'ぼ', う: 'ゔ' };
+const HANDAKU = { は: 'ぱ', ひ: 'ぴ', ふ: 'ぷ', へ: 'ぺ', ほ: 'ぽ' };
+const SMALL = { あ: 'ぁ', い: 'ぃ', う: 'ぅ', え: 'ぇ', お: 'ぉ', つ: 'っ', や: 'ゃ', ゆ: 'ゅ', よ: 'ょ', わ: 'ゎ' };
+const invert = o => Object.fromEntries(Object.entries(o).map(([a, b]) => [b, a]));
+const UNDAKU = invert(DAKU), UNHANDAKU = invert(HANDAKU), UNSMALL = invert(SMALL);
+// 最後の1文字に濁点・半濁点・小文字を付け外しする(付いていれば外す)
+function modifyLast(v, kind) {
+  const ch = v.slice(-1), head = v.slice(0, -1);
+  if (kind === 'daku') { const base = UNDAKU[ch] || UNHANDAKU[ch] || ch; return head + (UNDAKU[ch] ? base : (DAKU[base] || ch)); }
+  if (kind === 'handaku') { const base = UNHANDAKU[ch] || UNDAKU[ch] || ch; return head + (UNHANDAKU[ch] ? base : (HANDAKU[base] || ch)); }
+  if (kind === 'small') return head + (UNSMALL[ch] || SMALL[ch] || ch);
+  return v;
+}
+function kanaKeyboard() {
+  const cells = KANA_COLS.map(col => col.map(k => k ? `<button type="button" class="key" data-k="${k}">${k}</button>` : '<span class="key blank"></span>').join('')).join('');
+  return `<div class="kana" role="group" aria-label="ひらがなキーボード"><div class="kana-grid">${cells}</div>
+    <div class="kana-fn"><button type="button" class="key fn" data-f="daku" aria-label="濁点">゛</button><button type="button" class="key fn" data-f="handaku" aria-label="半濁点">゜</button><button type="button" class="key fn" data-f="small" aria-label="小さい文字">小</button><button type="button" class="key fn" data-k="ー" aria-label="のばす">ー</button><button type="button" class="key fn del" data-f="del" aria-label="1文字消す">⌫</button></div></div>`;
+}
+function bindKana(form, input) {
+  form.querySelectorAll('.key[data-k]').forEach(b => b.onclick = () => { input.value += b.dataset.k; });
+  form.querySelectorAll('.key[data-f]').forEach(b => b.onclick = () => {
+    input.value = b.dataset.f === 'del' ? input.value.slice(0, -1) : modifyLast(input.value, b.dataset.f);
+  });
 }
 
 function bindQuit() {
