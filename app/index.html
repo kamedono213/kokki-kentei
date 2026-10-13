@@ -24,6 +24,7 @@
   --body: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
   --mono: "Chivo Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
   --r: 10px;
+  --flag-edge: drop-shadow(0 0 0.6px rgba(21, 32, 58, .55)) drop-shadow(0 1px 2px rgba(21, 32, 58, .12));
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --bg: #0d1320; --surface: #161f31; --ink: #e7ecf5; --sub: #9aa6bd; --line: #2a3650;
@@ -35,6 +36,7 @@
   --sea: #0f1a2c; --land: #2b3754; --land-off: #1d263a; --border: #51607f; color-scheme: dark; }
 
 [hidden] { display: none !important; }
+*, *::before, *::after { box-sizing: border-box; }
 html, body { height: 100%; }
 body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; -webkit-tap-highlight-color: transparent; }
 #app { max-width: 640px; margin: 0 auto; padding-inline: 16px; padding-block: 16px 32px; min-height: 100%; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px; }
@@ -51,7 +53,7 @@ button:focus-visible, input:focus-visible { outline: 3px solid var(--accent); ou
 .masthead h1 { font-size: clamp(40px, 12vw, 64px); line-height: 1.05; }
 .masthead p { margin: 0; color: var(--sub); }
 .pole { display: flex; gap: 6px; align-items: flex-end; height: 34px; margin-top: 6px; overflow: hidden; }
-.pole img { height: 22px; border: 1px solid var(--line); animation: wave 3.2s ease-in-out infinite; transform-origin: left center; }
+.pole img { height: 22px; filter: var(--flag-edge); animation: wave 3.2s ease-in-out infinite; transform-origin: left center; }
 .pole img:nth-child(2n) { animation-delay: -.8s } .pole img:nth-child(3n) { animation-delay: -1.6s }
 @keyframes wave { 0%,100% { transform: skewY(0) } 50% { transform: skewY(-4deg) } }
 @media (prefers-reduced-motion: reduce) { .pole img { animation: none } }
@@ -85,8 +87,9 @@ legend { font-weight: 700; margin-bottom: 8px; }
 .progress .track { height: 4px; background: var(--line); border-radius: 2px; overflow: hidden; }
 .progress .fill { height: 100%; background: var(--accent); transition: width .3s; }
 .stage { display: grid; gap: 16px; justify-items: center; }
-.flag { display: block; max-width: 100%; height: auto; max-height: 180px; border: 1px solid var(--line); background: #fff; }
-.flag.big { max-height: 200px; width: min(100%, 320px); object-fit: contain; }
+/* 国旗は枠いっぱいに縦横比を保って収め、余白は透明のまま。輪郭は国旗の形に沿った細い影で出す(白い国旗用) */
+.flag { display: block; max-width: 100%; object-fit: contain; filter: var(--flag-edge); }
+.flag.big { width: min(100%, 320px); height: 200px; }
 .prompt { font-size: 14px; color: var(--sub); text-align: center; margin: 0; }
 .target-name { font-family: var(--display); font-size: clamp(26px, 8vw, 38px); text-align: center; line-height: 1.2; }
 .choices { display: grid; gap: 10px; width: 100%; }
@@ -97,7 +100,12 @@ legend { font-weight: 700; margin-bottom: 8px; }
 .choice:disabled { cursor: default; color: var(--ink); }
 .choices.flags { grid-template-columns: 1fr 1fr; }
 .choices.flags .choice { padding: 10px; display: grid; place-items: center; min-height: 104px; }
-.choices.flags img { max-height: 84px; max-width: 100%; border: 1px solid var(--line); background: #fff; }
+.choices.flags img { width: 100%; height: 84px; object-fit: contain; filter: var(--flag-edge); }
+.statement { margin: 0; width: 100%; box-sizing: border-box; padding: 14px 16px; background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: var(--r); font-size: 16px; line-height: 1.75; }
+.ox { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; width: 100%; }
+.ox .choice { text-align: center; font-size: 40px; line-height: 1; padding: 16px 0; font-weight: 700; }
+.fix del { color: var(--ng); }
+.fix ins { color: var(--ok); text-decoration: none; font-weight: 700; }
 .answer-form { display: grid; gap: 10px; width: 100%; }
 .answer-form input { font: inherit; font-size: 20px; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); color: var(--ink); width: 100%; box-sizing: border-box; }
 .verdict { width: 100%; border-radius: var(--r); padding: 12px 14px; display: grid; gap: 4px; background: var(--surface); border: 1px solid var(--line); }
@@ -108,7 +116,7 @@ legend { font-weight: 700; margin-bottom: 8px; }
 
 /* ---- 場所あて */
 .map-q { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: center; }
-.map-q .flag { max-height: 64px; max-width: 120px; }
+.map-q .flag { width: 120px; height: 72px; }
 .mapbox { position: relative; width: 100%; border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; background: var(--sea); touch-action: none; }
 .mapbox { height: clamp(260px, calc(100dvh - 330px), 640px); }
 .mapbox svg { display: block; width: 100%; height: 100%; max-width: 100%; }
@@ -128,7 +136,7 @@ legend { font-weight: 700; margin-bottom: 8px; }
 .score .big { font-family: var(--display); font-size: 64px; line-height: 1; }
 .misses { display: grid; gap: 8px; width: 100%; }
 .miss { display: grid; grid-template-columns: 64px 1fr; gap: 12px; align-items: center; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); }
-.miss img { width: 64px; max-height: 44px; object-fit: contain; border: 1px solid var(--line); background: #fff; }
+.miss img { width: 64px; height: 44px; object-fit: contain; filter: var(--flag-edge); }
 .miss p { margin: 0; font-size: 13px; color: var(--sub); }
 .stack { display: grid; gap: 10px; width: 100%; }
 .loading { text-align: center; color: var(--sub); padding: 40px 0; }
