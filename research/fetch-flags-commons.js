@@ -1,5 +1,5 @@
 // 英語版Wikipedia「Flag of 〇〇」記事の代表画像(=現在の国旗SVG)を Wikimedia Commons から取得して app/flags/ に保存する。
-// flagcdn の画像は更新が遅れることがある(例: 2025年のシリア国旗変更、2026年の北朝鮮の比率変更)ため、Wikipediaに合わせる。
+// flagcdn の画像は更新が遅れることがある(確認できた例: 北朝鮮の縦横比が2026年3月に1:1.65へ変更されたが、flagcdnは2:1のまま)ため、Wikipediaに合わせる。
 const fs = require('fs');
 const path = require('path');
 const meta = require('./flagfiles.json');
