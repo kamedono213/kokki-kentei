@@ -139,6 +139,7 @@ function renderHome() {
       ${Object.entries(MODES).map(([id, m]) => `
         <button class="mode" data-mode="${id}"><span class="no">${m.no}</span><span><b>${m.name}</b><span>${m.desc}</span></span></button>`).join('')}
     </nav>
+    <a class="shop" href="https://kentei-drill.booth.pm/items/9034108" target="_blank" rel="noopener"><b>紙で練習したい人へ: 印刷できる国旗クイズ(PDF)</b><span>197か国の国旗プリント・答えに国旗のひみつつき(BOOTH・500円)</span></a>
     <p class="note">収録国: 日本が承認している195か国 + 日本 + 北朝鮮 = 197か国(外務省「国・地域」の国名表記)。地域分けは中学地理の教科書に合わせ、中東・中央アジア・コーカサスはアジア、中米・カリブ海は北アメリカに入れています。由来の解説は英語版Wikipediaの各国国旗記事(2026年10月時点)をもとに要約しています。</p>`;
   bindSound();
   app.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => {
